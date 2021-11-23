@@ -46,12 +46,12 @@ var saveTasks = function() {
 
 $(".list-group").on("click", "p", function() {
   var text = $(this)
-  .text()
-  .trim();
+    .text()
+    .trim();
 
   var textInput = $("<textarea>")
-  .addClass("form-control")
-  .val(text);
+    .addClass("form-control")
+    .val(text);
 
   $(this).replaceWith(textInput);
   textInput.trigger("focus");
@@ -123,6 +123,7 @@ $(".list-group").on("blur", "input[type='text']", function() {
     .index();
 
   // update task in array and re-save to localStorage
+  debugger;
   tasks[status][index].date = date;
   saveTasks();
 
